@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title> A Pomodoro Clock</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<link rel="stylesheet" href="style.css">
+		<script src="script.js" async></script> 
+	</head>
+	
+	<body>
+		<div class="container">
+			<div class="logo"> 
+				<h1>Pomodoro Clock</h1>
+			</div>
+			<div class="form">
+				<div class="break" id="breakLength" unselectable="on">
+					<p>break length</p>
+					<div class="breakMinus" unselectable="on"> - </div> 
+					<div class="breakTime" unselectable="on"> 5 min</div>
+					<div class="breakPlus" unselectable="on"> + </div>
+				</div>
+				<div class="work" id="workLength" unselectable="on"> 
+					<p>work length</p>
+					<div class="workMinus" unselectable="on"> - </div>
+					<div class="workTime" unselectable="on"> 25 min</div>
+					<div class="workPlus" unselectable="on"> + </div>
+				</div>
+			</div>
+			
+			<div id="pomodoroUnder">
+				<p id="session"></p>
+				<p id="timer"></p> 
+				<div id="pomodoroAbove"> </div>
+			</div>
+			<br>
+			<div class="buttons">
+				<button id="start" onclick="begin()"> start </button>
+				<button id="stop" onclick="stop()"> stop </button> 
+				<button onclick="reset()"> reset </button>
+			</div>
+			<footer><p>&copy; Marina Osadcha</p></footer>
+		</div>
+	</body>
+</html>

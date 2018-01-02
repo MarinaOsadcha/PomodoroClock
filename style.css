@@ -1,0 +1,189 @@
+﻿html, body {
+	margin:0;
+	padding:0;
+	height: 100%;
+	background: rgb(186,56,24);
+	color: rgb(250,250,250);
+}
+div {
+	box-sizing: border-box;
+}
+.container {
+	position: relative;
+	min-height: 100%;
+	margin:0;
+	padding:0;
+}
+.logo {
+	border-bottom: 4px solid rgb(250,250,250);
+	height: 100px;
+}
+h1 {
+	position:relative;
+	margin: 0;
+	padding: 20px 0 10px 10%;
+	font-size: 45px;
+	font-family: arial;
+	font-weight: normal;
+	letter-spacing: 1px;
+}
+.form {
+	position: absolute;
+	margin: 130px 0 40px 10%;
+	padding:0;
+	vertical-align: top;
+	text-align: center;
+}
+.form p {
+	margin:0;
+	font-family: arial; 
+	font-size: 12px;	
+	text-transform: uppercase;
+	word-spacing: 4px;
+	letter-spacing:1px;
+	color: rgb(250,250,250);
+}
+.break {
+	margin-bottom: 70px;
+}
+.break div,.work div {
+	display: inline-block;
+	font-family: arial;
+	font-size: 20px;
+	color: rgb(250,250,250);
+}
+.breakMinus,.breakPlus,.workMinus,.workPlus {
+	width: 25px;
+	cursor: pointer;
+	-moz-user-select: none;  /*для удаления синего выделения при двойном клике*/
+    -khtml-user-select: none;
+    user-select: none;   
+}
+.breakTime,.workTime {
+	width: 70px;
+	font-size: 18px;
+	margin-right: -10px;
+	margin-left: -10px;
+}
+#pomodoroUnder {
+	position: relative;
+	width: 230px;
+    height: 230px;
+	margin: auto;
+	margin-top:80px;
+    border: 2px solid rgb(250,250,250);
+    border-radius: 150px;
+    background: rgb(186,56,24);
+    overflow: hidden;
+    z-index: 2;
+}
+#pomodoroUnder:before {
+	content: '';
+	position: absolute;
+	top:0; bottom:0; right:0; left:0;
+	border: 4px solid rgb(186,56,24);
+	border-radius: 150px;
+}
+#session {
+	margin-top: 85px;
+	text-align: center;
+	font-family: arial; 
+	font-size: 18px;	
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	z-index:14;
+}
+#timer {
+	margin-top:10px;
+    font-family: arial; 
+    font-size: 25px;
+    letter-spacing: 2px;
+    font-weight: bold;
+	text-align: center;
+	z-index:14;
+}
+#pomodoroAbove {
+    position: absolute;
+    z-index: -1;
+    bottom: 0; left: 0; right: 0;
+    width: 230px;
+    height: 0;
+    background: rgb(170,150,150);
+}
+.buttons {
+	position: relative;
+	width: 40%;
+	height: 36px;
+	margin:auto;
+	padding-top: 50px;
+	padding-bottom: 80px;
+	text-align: center;
+}
+button {
+	width: 85px;
+	height: 36px;
+	margin-right: 20px;
+	margin-left: 20px;
+	padding:0;
+	font-family: arial; 
+	font-size: 12px;	
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	vertical-align: top;    /*чтобы не дергались слова при hover*/
+	background: rgb(186,56,24);
+	color: rgb(250,250,250);
+	border: none;
+	outline: none;
+}
+button:hover {
+	font-size: 13px;
+	font-weight: bold;
+	cursor: pointer;
+}
+button:disabled {
+	color: rgba(250,250,250,0.4);
+	font-size: 12px !important;
+	font-weight: normal;
+	cursor: default
+}
+footer{
+	position:absolute;
+	width:100%;
+	height:40px;
+	padding: 0;
+	margin:0;
+	bottom: 0;
+	text-align:center;
+	color: rgb(250,250,250);
+}
+footer p {
+	margin:0;
+	padding: 0;
+	font-size: 15px;
+	letter-spacing: 1px;
+	font-family: arial;
+	font-weight: normal;
+	text-transform: capitalize;
+}
+@media only screen and (max-width: 1000px) {
+	.buttons {width:100%}
+}
+@media only screen and (max-width: 768px) {
+	.form {margin-top:100px;}
+	#pomodoroUnder {margin-top:50px;}
+	.buttons {width:100%; padding-top:20px;}
+}
+@media only screen and (max-width: 650px) {
+	h1 {text-align:center; padding-right:20px; padding-left:20px;}
+	.form {position:relative; margin:auto; margin-top:30px; margin-bottom:30px; width:100%;}
+	.break,.work {display:inline-block; margin:0;}
+	.break {padding-right: 60px;}
+	#pomodoroUnder {position:relative; margin:auto;}
+}
+@media only screen and (max-width: 480px) {
+	.logo {height:auto;}
+	h1 {padding-top:10px;}
+	button {margin:0;}
+	footer {height: 30px;}
+	.buttons {width:100%;}
+} 
